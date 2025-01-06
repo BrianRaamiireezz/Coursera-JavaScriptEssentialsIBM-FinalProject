@@ -6,6 +6,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/index.css">
+
     <title>
         Dr. Travel
     </title>
@@ -40,31 +43,43 @@
         </nav>
 
         <form role="search">
-            <label for="search_input">
+            <label for="search_input" class="not-visible">
                 Destination or keyword
             </label>
-            <input type="search" name="search_term" id="search_input">
+            <input 
+                type="search" 
+                name="search_term" 
+                id="search_input" 
+                placeholder="Enter a destination or keyword"
+            >
 
-            <input type="submit" value="Search">
-            <input type="reset" value="Clear">
+            <button type="submit">
+                Search
+            </button>
+            <button type="reset">
+                Clear
+            </button>
         </form>
     </header>
 
     <main>
-        <h1>
-            Explore dream destination
-        </h1>
-        <p>
-            It encourages exploration of unfamiliar territories, 
-            embracing diverse cultures and landscapes, 
-            while pursuing the desired destination that 
-            captivates the heart and ignites a sense of wonder.
-        </p>
+        <section>
+            <h1>
+                Explore dream destination
+            </h1>
 
-        <div aria-label="Social media links">
+            <p>
+                It encourages exploration of unfamiliar territories, 
+                embracing diverse cultures and landscapes, 
+                while pursuing the desired destination that 
+                captivates the heart and ignites a sense of wonder.
+            </p>
+        </section>
+
+        <div aria-label="Social media links" class="social-media-links">
             <ul>
                 <li>
-                    <a href="#">X</a>
+                    <a href="#">X (Twitter)</a>
                 </li>
                 <li>
                     <a href="#">Facebook</a>
