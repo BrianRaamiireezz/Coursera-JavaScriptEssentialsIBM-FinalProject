@@ -42,7 +42,7 @@
             </ul>
         </nav>
 
-        <form role="search">
+        <form role="search" id="search_form">
             <label for="search_input" class="not-visible">
                 Destination or keyword
             </label>
@@ -51,6 +51,7 @@
                 name="search_term" 
                 id="search_input" 
                 placeholder="Enter a destination or keyword"
+                required
             >
 
             <button type="submit">
@@ -93,5 +94,7 @@
             </ul>
         </div>
     </main>
+
+    <script src="travel_recommendation.js"></script>
 </body>
 </html>
