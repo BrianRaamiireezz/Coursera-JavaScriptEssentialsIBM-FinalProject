@@ -47,7 +47,7 @@ textarea {
     padding: 0.5rem 0.75rem;
     font-size: inherit;
     font-family: inherit;
-    border: 0.1rem solid var(--color-accent);
+    border: 0.05rem solid var(--color-accent);
     border-radius: 0.25rem;
     background-color: inherit;
     color: var(--color-accent);
@@ -123,15 +123,18 @@ header input[type="search"] {
 }
 
 main {
+    position: relative;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1rem;
     gap: 1rem;
     flex: 1;
+    overflow-y: auto;
     background-image: url('../assets/background.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left 170% top 0%;
 }
 
 .not-visible {

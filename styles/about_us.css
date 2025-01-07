@@ -1,38 +1,30 @@
-#about-us {
+#about-us,
+#our-team {
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
 }
 
-#about-us h1,
-#about-us p,
-#our-team h2 {
-    padding: 1rem 1.5rem;
-}
-
-#about-us h1,
-#about-us p,
-#our-team h2,
-#our-team section {
-    background-color: var(--color-background);
-    border: 1px solid var(--color-accent);
-    border-radius: 0.25rem;
-}
-
-#our-team {
+#our-team ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
-#our-team section {
+#our-team li {
     padding: 0.25rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     flex: 1;
+    border: 1px solid var(--color-accent);
+    border-radius: 0.25rem;
 }
 
-#our-team h3 {
+#our-team li p:nth-child(1) {
     font-size: 1rem;
 }
 
@@ -42,6 +34,6 @@
 }
 
 #our-team span,
-#our-team p {
+#our-team li p:nth-child(2) {
     font-size: 0.7rem;
 }
