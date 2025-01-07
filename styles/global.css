@@ -42,11 +42,12 @@ button {
 }
 
 button,
-input {
+input,
+textarea {
     padding: 0.5rem 0.75rem;
     font-size: inherit;
     font-family: inherit;
-    border-color: var(--color-accent);
+    border: 0.1rem solid var(--color-accent);
     border-radius: 0.25rem;
     background-color: inherit;
     color: var(--color-accent);
@@ -54,6 +55,7 @@ input {
 
 header {
     padding: 0.75rem 0;
+    height: 4.1rem;
 }
 
 header h1 {
@@ -65,9 +67,27 @@ header ul,
 header form {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+}
+
+header,
+header ul {
+    justify-content: flex-start;
+}
+
+header {
+    gap: 2rem;
+}
+
+header ul,
+header form {
     gap: 1rem;
+}
+
+header form {
+    flex: 1;
+    justify-self: flex-end;
+    justify-content: flex-end;
 }
 
 header form button {
@@ -106,8 +126,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     padding: 1rem;
+    gap: 1rem;
     flex: 1;
     background-image: url('../assets/background.jpg');
     background-size: cover;
@@ -128,7 +148,7 @@ main {
 
 .social-media-links li {
     padding: 0.5rem 0.75rem;
-    border: 1px solid;
+    border: 0.01rem solid;
     border-radius: 0.25rem;
     background-color: var(--color-background);
 }
