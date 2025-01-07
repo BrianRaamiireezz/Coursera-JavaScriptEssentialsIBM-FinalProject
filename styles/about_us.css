@@ -1,0 +1,54 @@
+/*
+    padding: 1rem 1.5rem;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-accent);
+    border-radius: 0.25rem;
+*/
+
+#about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+#about-us h1,
+#about-us p,
+#our-team h2 {
+    padding: 1rem 1.5rem;
+}
+
+#about-us h1,
+#about-us p,
+#our-team h2,
+#our-team section {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-accent);
+    border-radius: 0.25rem;
+}
+
+#our-team {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#our-team section {
+    padding: 0.25rem 0.5rem;
+    flex: 1;
+}
+
+#our-team h3 {
+    font-size: 1rem;
+}
+
+#our-team span {
+    display: block;
+    color: var(--color-accent);
+}
+
+#our-team span,
+#our-team p {
+    font-size: 0.7rem;
+}
