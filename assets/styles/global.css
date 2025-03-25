@@ -131,7 +131,7 @@ main {
     gap: 1rem;
     flex: 1;
     overflow-y: auto;
-    background-image: url('../assets/background.jpg');
+    background-image: url('../images/background.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left 170% top 0%;
