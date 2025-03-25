@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <link
+        rel="stylesheet"
+        href="./assets/styles/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./assets/styles/index.css"
+    >
 
     <title>
         Dr. Travel
@@ -23,17 +34,17 @@
         <nav>
             <ul>
                 <li>
-                    <a href="./travel_recommendation.html">
+                    <a href="./index.html">
                         Home
                     </a>
                 </li>
-    
+
                 <li>
                     <a href="./about_us.html">
                         About us
                     </a>
                 </li>
-    
+
                 <li>
                     <a href="./contact_us.html">
                         Contact us
@@ -42,14 +53,22 @@
             </ul>
         </nav>
 
-        <form role="search" id="search_form">
-            <label for="search_input" class="not-visible">
+        <form
+            role="search"
+            id="search_form"
+        >
+            <!-- C not-visible class -->
+            <label
+                for="search_input"
+                class="not-visible"
+            >
                 Destination or keyword
             </label>
-            <input 
-                type="search" 
-                name="search_term" 
-                id="search_input" 
+
+            <input
+                type="search"
+                name="search_term"
+                id="search_input"
                 placeholder="Enter a destination or keyword"
                 required
             >
@@ -70,31 +89,42 @@
             </h1>
 
             <p>
-                The world is your playground and every destination holds 
-                the promise of unforgettable memories. 
-                Our passionate team of travel experts is dedicated to 
-                curating tailor-made experiences that cater to your unique desires 
-                and interests. 
-                Whether you're dreaming of a serene beach retreat, an exhilarating mountain trek, 
-                or a cultural exploration, we're here to turn your travel dreams into reality.
+                The world is your playground and every destination
+                holds the promise of unforgettable memories. Our
+                passionate team of travel experts is dedicated to
+                curating tailor-made experiences that cater to your
+                unique desires and interests. Whether you're dreaming
+                of a serene beach retreat, an exhilarating mountain
+                trek,or a cultural exploration, we're here to turn
+                your travel dreams into reality.
             </p>
         </section>
 
-        <section id="search-results" aria-hidden="true" class="not-visible">
+        <section
+            id="search-results"
+            aria-hidden="true"
+            class="not-visible"
+        >
             <h2 class="not-visible">
                 Search results
             </h2>
 
-            <p aria-hidden="true" class="not-visible">
+            <p
+                aria-hidden="true"
+                class="not-visible"
+            >
                 No results found...
             </p>
 
             <ul>
-                
+
             </ul>
         </section>
 
-        <div aria-label="Social media links" class="social-media-links">
+        <div
+            aria-label="Social media links"
+            class="social-media-links"
+        >
             <ul>
                 <li>
                     <a href="#">X (Twitter)</a>
@@ -112,6 +142,8 @@
         </div>
     </main>
 
-    <script src="travel_recommendation.js"></script>
+    <script src="./assets/scripts/main.js">
+    </script>
 </body>
+
 </html>
