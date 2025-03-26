@@ -1,0 +1,127 @@
+body {
+    height: 100vh;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 0.75rem 0;
+    height: 4.1rem;
+}
+
+header h1 {
+    font-size: 1rem;
+}
+
+header,
+header ul,
+header form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header,
+header ul {
+    justify-content: flex-start;
+}
+
+header {
+    gap: 2rem;
+}
+
+header ul,
+header form {
+    gap: 1rem;
+}
+
+header form {
+    flex: 1;
+    justify-self: flex-end;
+    justify-content: flex-end;
+}
+
+header form button {
+    position: relative;
+}
+
+header form button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25 113 54 / 0.05);
+    z-index: -1;
+    opacity: 0%;
+}
+
+header form button:hover::before {
+    opacity: 100%;
+}
+
+header a {
+    color: var(--color-accent);
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header input[type="search"] {
+    width: 21rem;
+}
+
+main {
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    flex: 1;
+    overflow-y: auto;
+    background-image: url('../../images/background.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left 170% top 0%;
+}
+
+.social-media-links ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.social-media-links li {
+    padding: 0.5rem 0.75rem;
+    border: 0.01rem solid;
+    border-radius: 0.25rem;
+    background-color: var(--color-background);
+}
+
+/* Twitter */
+.social-media-links li:nth-child(1) {
+    border-color: #195F71;
+    color: #195F71;
+}
+
+/* Facebook */
+.social-media-links li:nth-child(2) {
+    border-color: #1A1971;
+    color: #1A1971;
+}
+
+/* Instagram */
+.social-media-links li:nth-child(3) {
+    border-color: #71196A;
+    color: #71196A;
+}
+
+/* YouTube */
+.social-media-links li:nth-child(4) {
+    border-color: #711919;
+    color: #711919;
+}
