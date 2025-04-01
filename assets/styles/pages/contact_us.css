@@ -1,7 +1,4 @@
-@import url("../layout/main.css");
-
 #contact-us {
-    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
