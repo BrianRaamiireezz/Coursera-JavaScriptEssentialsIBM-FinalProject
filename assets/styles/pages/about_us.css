@@ -1,41 +1,44 @@
-@import url("../layout/main.css");
-
 #about-us,
-#our-team {
-    width: 70%;
+#our-team
+{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
 }
 
-#our-team ul {
+#our-team ul
+{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
-#our-team li {
+#our-team li
+{
     padding: 0.25rem 0.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     flex: 1;
-    border: 1px solid var(--color-accent);
+    border: 1px solid var(--color-light-primary);
     border-radius: 0.25rem;
 }
 
-#our-team li p:nth-child(1) {
+#our-team li p:nth-child(1)
+{
     font-size: 1rem;
 }
 
-#our-team span {
+#our-team span
+{
     display: block;
-    color: var(--color-accent);
+    color: var(--color-light-primary);
 }
 
 #our-team span,
-#our-team li p:nth-child(2) {
+#our-team li p:nth-child(2)
+{
     font-size: 0.7rem;
 }

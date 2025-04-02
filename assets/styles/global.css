@@ -1,58 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-    --color-background: #ffffff;
-    --color-accent: #197136;
+:root
+{
+    --color-light-primary: #197136;
+    --color-light-background: #ffffff;
+    --color-light-text-primary: #3d3d3d;
+
+    --line-height: 1.2;
+
+    --padding-control: 0.5rem 0.75rem;
+    --border-control: 0 0 0 0.05rem inset;
+    --border-radius-control: 0.25rem;
 }
 
 *,
 *::before,
-*::after {
+*::after
+{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
-    /* TEST */
-    /*  border: 1px solid black */
 }
 
-html {
-    line-height: 1.2;
+html
+{
+    line-height: var(--line-height);
+    font-size: 125%;
 }
 
-body {
+body
+{
     font-family: "Noto Sans Mono", serif;
-    background-color: var(--color-background);
-    color: #3d3d3d;
+    background-color: var(--color-light-background);
+    color: var(--color-light-text-primary);
 }
 
-li {
+li
+{
     list-style: none;
 }
 
-a {
+a
+{
     color: inherit;
     text-decoration: none;
     font-weight: bold;
 }
 
-button {
-    cursor: pointer;
-}
-
 button,
 input,
-textarea {
-    padding: 0.5rem 0.75rem;
-    font-size: inherit;
+textarea
+{
+    padding: var(--padding-control);
+
+    font-size: 1rem;
     font-family: inherit;
-    border: 0.05rem solid var(--color-accent);
-    border-radius: 0.25rem;
+    line-height: inherit;
+
+    border: none;
+    border-radius: var(--border-radius-control);
+    box-shadow: var(--border-control) var(--color-light-primary);
+
     background-color: inherit;
-    color: var(--color-accent);
+
+    color: var(--color-light-text-primary);
 }
 
-.not-visible {
+button
+{
+    cursor: pointer;
+
+    position: relative;
+
+    &:hover::before
+    {
+        opacity: 100%;
+    }
+
+    &::before
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:
+            rgba(from var(--color-light-primary) r g b / 0.05);
+        z-index: -1;
+        opacity: 0%;
+    }
+}
+
+.not-visible
+{
     width: 0;
     height: 0;
     overflow: hidden;

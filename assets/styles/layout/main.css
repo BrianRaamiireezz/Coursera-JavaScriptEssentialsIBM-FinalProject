@@ -1,127 +1,295 @@
-body {
-    height: 100vh;
-    padding: 0.5rem 1rem;
+:root
+{
+    /* Layout variables (l) */
+
+    /*
+        Padding (pd)
+            layout
+            header (h)
+    */
+    --l-pd: 0.5rem 1rem;
+    --l-h-pd: 0.5rem 1rem;
+
+    /*
+        Minimum width (mnw)
+            header
+                title
+                navigation
+                    list-item
+                search_form
+                    input
+                    button
+    */
+    --l-h-t-mnw: 6rem;
+    --l-h-n-li-mnw: 6rem;
+    --l-h-sf-i-mnw: 21rem;
+    --l-h-sf-b-mnw: 6rem;
+
+    /*  
+        Minimum height (mnh)
+            header
+    */
+    --l-h-mnh: 3.2rem;
+
+    /*
+        Gap (gp)
+        header
+            sections
+            sub-sections
+    */
+    --l-h-s-gp: 2rem;
+    --l-h-ss-gp: 1rem;
+
+    /*
+        Social media links (sml)
+            color (c)
+                x
+                facebook
+                instagram
+                youtube
+    */
+    --l-sml-c-x: #195F71;
+    --l-sml-c-f: #1A1971;
+    --l-sml-c-i: #71196A;
+    --l-sml-c-y: #711919;
+}
+
+.layout
+{
+    min-height: 100vh;
+
+    padding: var(--l-pd);
+
     display: flex;
     flex-direction: column;
 }
 
-header {
-    padding: 0.75rem 0;
-    height: 4.1rem;
-}
+.layout__header
+{
+    min-height: var(--l-h-mnh);
 
-header h1 {
-    font-size: 1rem;
-}
+    padding: var(--l-h-pd);
 
-header,
-header ul,
-header form {
     display: flex;
     flex-direction: row;
+    gap: var(--l-h-s-gp);
+
     align-items: center;
 }
 
-header,
-header ul {
-    justify-content: flex-start;
+.layout__header__navigation__list,
+.layout__header__search_form,
+.layout__header__search_form__controls
+{
+    display: flex;
+    flex-direction: row;
+    gap: var(--l-h-ss-gp);
 }
 
-header {
-    gap: 2rem;
+.layout__header__title
+{
+    min-width: var(--l-h-t-mnw);
+
+    white-space: nowrap;
+
+    font-size: 1rem;
 }
 
-header ul,
-header form {
-    gap: 1rem;
+.layout__header__navigation__list
+{
+    li
+    {
+        min-width: var(--l-h-n-li-mnw);
+    }
+
+    a
+    {
+        display: inline-block;
+
+        width: 100%;
+
+        text-align: center;
+        color: var(--color-accent);
+
+        &:hover
+        {
+            text-decoration: underline;
+        }
+    }
 }
 
-header form {
+.layout__header__search_form
+{
     flex: 1;
-    justify-self: flex-end;
-    justify-content: flex-end;
+
+    label
+    {
+        position: absolute;
+        top: -300px;
+        left: 0;
+    }
+
+    input
+    {
+        flex: 1;
+        min-width: var(--l-h-sf-i-mnw);
+    }
+
+    button
+    {
+        min-width: var(--l-h-sf-b-mnw);
+    }
 }
 
-header form button {
-    position: relative;
-}
-
-header form button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(25 113 54 / 0.05);
-    z-index: -1;
-    opacity: 0%;
-}
-
-header form button:hover::before {
-    opacity: 100%;
-}
-
-header a {
-    color: var(--color-accent);
-}
-
-header a:hover {
-    text-decoration: underline;
-}
-
-header input[type="search"] {
-    width: 21rem;
-}
-
-main {
+.layout__main
+{
     position: relative;
     padding: 1rem;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1rem;
+    gap: var(--l-h-ss-gp);
+
     flex: 1;
-    overflow-y: auto;
+
     background-image: url('../../images/background.jpg');
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-position: left 170% top 0%;
+    background-position: right -70vw top 0%;
+
+    > *
+    {
+        max-width: calc(70vw - 3rem);
+    }
 }
 
-.social-media-links ul {
+.layout__social_media_links
+{
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    gap: var(--l-h-ss-gp);
+
+    li
+    {
+        padding: var(--padding-control);
+
+        border: none;
+        border-radius: var(--border-radius-control);
+
+        /* Twitter */
+        &:nth-child(1)
+        {
+            box-shadow: var(--border-control) var(--l-sml-c-x);
+            color: var(--l-sml-c-x);
+        }
+
+        /* Facebook */
+        &:nth-child(2)
+        {
+            box-shadow: var(--border-control) var(--l-sml-c-f);
+            color: var(--l-sml-c-f);
+        }
+
+        /* Instagram */
+        &:nth-child(3)
+        {
+            box-shadow: var(--border-control) var(--l-sml-c-i);
+            color: var(--l-sml-c-i);
+        }
+
+        /* YouTube */
+        &:nth-child(4)
+        {
+            box-shadow: var(--border-control) var(--l-sml-c-y);
+            color: var(--l-sml-c-y);
+        }
+    }
 }
 
-.social-media-links li {
-    padding: 0.5rem 0.75rem;
-    border: 0.01rem solid;
-    border-radius: 0.25rem;
-    background-color: var(--color-background);
+/*
+    (6 * 6) + (2 * 2) + (4 * 1) + 21 + 4
+*/
+@media screen and (max-width: 69rem)
+{
+    .layout__header
+    {
+        flex-wrap: wrap;
+    }
+
+    .layout__header__search_form
+    {
+        width: 100%;
+    }
 }
 
-/* Twitter */
-.social-media-links li:nth-child(1) {
-    border-color: #195F71;
-    color: #195F71;
+/*
+    (6 * 2) + 2 + 21 + 4
+*/
+@media screen and (max-width: 39rem)
+{
+    .layout__header__search_form
+    {
+        flex-wrap: wrap;
+    }
+
+    .layout__header__search_form__controls
+    {
+        flex: 1;
+        justify-content: space-between;
+    }
 }
 
-/* Facebook */
-.social-media-links li:nth-child(2) {
-    border-color: #1A1971;
-    color: #1A1971;
+/*
+    (6 * 4) + 2 + 2 + 4
+*/
+@media screen and (max-width: 32rem)
+{
+    .layout__header__title
+    {
+        flex: 1;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .layout__header__navigation
+    {
+        flex: 1;
+    }
+
+    .layout__header__navigation__list
+    {
+        justify-content: center;
+    }
 }
 
-/* Instagram */
-.social-media-links li:nth-child(3) {
-    border-color: #71196A;
-    color: #71196A;
-}
+/*
+    (6 * 3) + 2 + 4
+*/
+@media screen and (max-width: 24rem)
+{
 
-/* YouTube */
-.social-media-links li:nth-child(4) {
-    border-color: #711919;
-    color: #711919;
+    .layout__header,
+    .layout__header__navigation__list,
+    .layout__header__search_form
+    {
+        flex-direction: column;
+    }
+
+    .layout__header__search_form
+    {
+        input
+        {
+            width: 100%;
+            min-width: unset;
+            max-width: unset;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .layout__header__search_form__controls
+    {
+        flex-wrap: wrap;
+    }
 }

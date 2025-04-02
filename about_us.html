@@ -14,6 +14,12 @@
         rel="stylesheet"
         href="./assets/styles/global.css"
     >
+
+    <link
+        rel="stylesheet"
+        href="./assets/styles/layout/main.css"
+    >
+
     <link
         rel="stylesheet"
         href="./assets/styles/pages/about_us.css"
@@ -24,14 +30,14 @@
     </title>
 </head>
 
-<body>
-    <header>
-        <h1>
+<body class="layout">
+    <header class="layout__header">
+        <h1 class="layout__header__title">
             Dr. Travel
         </h1>
 
-        <nav>
-            <ul>
+        <nav class="layout__header__navigation">
+            <ul class="layout__header__navigation__list">
                 <li>
                     <a href="./index.html">
                         Home
@@ -40,20 +46,20 @@
 
                 <li>
                     <a href="./about_us.html">
-                        About us
+                        About
                     </a>
                 </li>
 
                 <li>
                     <a href="./contact_us.html">
-                        Contact us
+                        Contact
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="layout__main">
         <section id="about-us">
             <h1>
                 About us
@@ -118,25 +124,23 @@
             </ul>
         </section>
 
-        <div
+        <ul
             aria-label="Social media links"
-            class="social-media-links"
+            class="layout__social_media_links"
         >
-            <ul>
-                <li>
-                    <a href="#">X (Twitter)</a>
-                </li>
-                <li>
-                    <a href="#">Facebook</a>
-                </li>
-                <li>
-                    <a href="#">Instagram</a>
-                </li>
-                <li>
-                    <a href="#">Youtube</a>
-                </li>
-            </ul>
-        </div>
+            <li>
+                <a href="#">X (Twitter)</a>
+            </li>
+            <li>
+                <a href="#">Facebook</a>
+            </li>
+            <li>
+                <a href="#">Instagram</a>
+            </li>
+            <li>
+                <a href="#">Youtube</a>
+            </li>
+        </ul>
     </main>
 </body>
 
