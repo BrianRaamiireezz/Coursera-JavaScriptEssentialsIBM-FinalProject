@@ -1,44 +1,65 @@
-#about-us,
-#our-team
+.about_us,
+.our_team,
+.our_team__list,
+.our_team__list li
 {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+}
+
+.about_us,
+.our_team,
+.our_team__list
+{
     gap: 1rem;
 }
 
-#our-team ul
+.about_us,
+.our_team,
+.our_team__list li
 {
-    display: flex;
+    flex-direction: column;
+}
+
+.about_us,
+.our_team
+{
+    align-items: flex-start;
+}
+
+.our_team__list
+{
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1rem;
 }
 
-#our-team li
+.our_team__list li
 {
     padding: 0.25rem 0.5rem;
-    display: flex;
-    flex-direction: column;
+
     gap: 0.5rem;
     flex: 1;
-    border: 1px solid var(--color-light-primary);
-    border-radius: 0.25rem;
+
+    border: none;
+    border-radius: var(--border-radius-control);
+    box-shadow: var(--border-control) var(--color-light-primary);
 }
 
-#our-team li p:nth-child(1)
+/* Card - Name */
+.our_team li p:nth-child(1)
 {
     font-size: 1rem;
 }
 
-#our-team span
+/* Card - Job title */
+.our_team span
 {
     display: block;
     color: var(--color-light-primary);
 }
 
-#our-team span,
-#our-team li p:nth-child(2)
+.our_team span,
+/* Card - Description */
+.our_team li p:nth-child(2)
 {
     font-size: 0.7rem;
 }
