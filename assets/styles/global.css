@@ -94,7 +94,7 @@ button
 
 .not-visible
 {
-    width: 0;
-    height: 0;
-    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: -100vw;
 }
