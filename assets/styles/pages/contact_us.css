@@ -1,42 +1,23 @@
-#contact-us {
+.contact_us,
+.contact_us form
+{
     display: flex;
     flex-direction: column;
+}
+
+.contact_us
+{
     align-items: flex-start;
     gap: 1rem;
 }
 
-#contact-us h1,
-#contact-us form {
-    border-radius: 0.25rem;
-}
-
-#contact-us form {
-    display: flex;
-    flex-direction: column;
+.contact_us form
+{
     align-self: stretch;
     gap: 0.5rem;
 }
 
-#contact-us form button {
-    position: relative;
-}
-
-#contact-us form button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(25 113 54 / 0.05);
-    z-index: -1;
-    opacity: 0%;
-}
-
-#contact-us form button:hover::before {
-    opacity: 100%;
-}
-
-#contact-us textarea {
+.contact_us textarea
+{
     max-width: 100%;
 }

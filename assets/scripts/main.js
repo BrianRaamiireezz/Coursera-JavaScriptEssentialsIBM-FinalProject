@@ -3,7 +3,7 @@ const introduction =
 const search_form =
     document.getElementById("search_form");
 const search_results =
-    document.getElementById("search-results");
+    document.getElementById("search_results");
 const not_found_feedback =
     search_results.querySelector("p");
 
@@ -35,7 +35,7 @@ async function fetch_destination_data(keyword)
 {
     const response =
         await fetch('/assets/data/travel_recommendation_api.json');
-        
+
     const json_data =
         await response.json();
 
@@ -81,16 +81,17 @@ function show_data(data)
         (image_name, destination_name, destination_description) =>
         {
             return (`
-                <li class="recommendation">
+                <li class="search_results__list__item">
                     <img 
+                        class="search_results__list__item__image"
                         src="/assets/images/destinations/${image_name}"
                         alt="${destination_name} image" 
                         aria-hidden="true"
                     >
-                    <p class="recommendation__name">
+                    <p class="search_results__list__item__name">
                         ${destination_name}
                     </p>
-                    <p class="recommendation__description">
+                    <p class="search_results__list__item__description">
                         ${destination_description}
                     </p>
                 </li>
