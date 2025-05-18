@@ -34,7 +34,7 @@ function show_sections(...section_elements)
 async function fetch_destination_data(keyword)
 {
     const response =
-        await fetch('/assets/data/travel_recommendation_api.json');
+        await fetch('./assets/data/travel_recommendation_api.json');
 
     const json_data =
         await response.json();
@@ -84,7 +84,7 @@ function show_data(data)
                 <li class="search_results__list__item">
                     <img 
                         class="search_results__list__item__image"
-                        src="/assets/images/destinations/${image_name}"
+                        src="./assets/images/destinations/${image_name}"
                         alt="${destination_name} image" 
                         aria-hidden="true"
                     >
